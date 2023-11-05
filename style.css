@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+#greeting-container {
+  margin: 50px 25px;
+  color: #fb6756;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#greeting {
+  font-family: "Agbalumo";
+  font-size: 2em;
+}
+#message {
+  font-family: "Agbalumo";
+  font-style: italic;
+  font-size: 1.35rem;
+  color: #fff;
+  margin-left: 2rem;
+}
+
+.datetime {
+  position: relative;
+  color: #fff; /* Text color */
+  padding: 10px;
+  font-size: 16px; /* Font size */
+  border-radius: 8px; /* Rounded corners for the element */
+  width: 180px; /* Adjust the width as needed */
+  margin: 10px; /* Margin for positioning */
+  padding: 0.9rem;
+  font-family: "Agbalumo";
+  font-size: 1.34rem;
+}
+
+.datetime::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(
+    255,
+    255,
+    255,
+    0.7
+  ); /* Semi-transparent white background for the blur effect */
+  filter: blur(10px); /* Apply a blur effect to the background */
+  border-radius: inherit; /* Match the element's rounded corners */
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #153677, #4e085f);
+  padding: 10px;
+}
+.todo-app {
+  width: 100%;
+  max-width: 540px;
+  background: #fff;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+}
+.todo-app h2 {
+  color: #002765;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  margin-bottom: 20px;
+}
+.icon {
+  font-size: 35px;
+  margin-left: 10px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 10px 30px;
+  background: #ff5945;
+  color: #4e085f;
+  font-size: 30px;
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50px;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+}
+ul .checked {
+  color: #555;
+  text-decoration: line-through;
+}
+ul .checked::before {
+  background-image: url(images/checked.png);
+}
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 45px;
+  height: 45px;
+  font-size: 28px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+ul li span:hover {
+  background: #edeef0;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  #greeting-container {
+    margin: 20px 15px;
+  }
+
+  #greeting {
+    font-size: 1.2em;
+  }
+
+  #message {
+    font-size: 16px;
+    margin-left: 0;
+  }
+
+  .datetime {
+    font-size: 1.02rem;
+    width: 120px;
+    margin: 5px;
+  }
+}
